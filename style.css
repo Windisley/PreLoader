@@ -58,23 +58,32 @@ body{
 }
 
 .cont-load .content-load .load{
-    width: 340px;
-    height: 340px;
+    width: 300px;
+    height: 300px;
     border: 20px solid;
     border-radius: 50%;
     border-top: red solid 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    position: relative;
+    animation: load .8s infinite ease-in-out;
 }
 
-.cont-load .content-load .load p{
+.cont-load p{
     text-align: center;
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: .3px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
     
 }
 
+
+ @keyframes load{
+    to{
+        transform: rotate(360deg);
+    }
+ }
